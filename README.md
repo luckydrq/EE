@@ -37,8 +37,8 @@ You can see the [test cases](https://github.com/luckydrq/EE/blob/master/test/ee.
 ## Lisence
 MIT
 
-[npm-image]: https://img.shields.io/npm/v/EE.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/EE
+[npm-image]: https://img.shields.io/npm/v/power-ee.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/power-ee
 [travis-image]: https://img.shields.io/travis/luckydrq/EE/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/luckydrq/EE
 [coveralls-image]: https://img.shields.io/coveralls/luckydrq/EE/master.svg?style=flat-square
