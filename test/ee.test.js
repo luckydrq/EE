@@ -16,14 +16,19 @@ describe('EE test', function() {
   it('should delegate', function(done) {
     var ee1 = new EE();
     var ee2 = new EE();
+    var ee3 = new EE();
 
     ee1.delegate(ee2, ['hi', 'hello']);
+    ee3.delegate(ee2, 'hi');
     ee1.on('hi', function(msg) {
       assert.equal(msg, 'luckydrq');
     });
     ee1.on('hello', function(msg) {
       assert.equal(msg, 'world');
       done();
+    });
+    ee3.on('hi', function(msg) {
+      assert.equal(msg, 'luckydrq');
     });
 
     ee2.emit('hi', 'luckydrq');
@@ -153,5 +158,10 @@ describe('EE test', function() {
     ee = patch(ee);
     assert(ee instanceof EE);
     assert(ee._listeners);
+  });
+
+  it('should return when delegate obj is not an instance of EventEmitter', function() {
+    var ee1 = new EE();
+    ee1.delegate({}, 'hi');
   });
 });

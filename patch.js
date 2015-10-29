@@ -3,11 +3,6 @@
 var assert = require('assert');
 var EventEmitter = require('events').EventEmitter;
 var indexOf = require('array-index-of');
-var patched = false;
-
-if (patched === true) {
-  return;
-}
 
 EventEmitter.prototype.listenTo = function(target, events, callback) {
   this._addListener(false, target, events, callback);
@@ -79,7 +74,7 @@ EventEmitter.prototype._addEvent = function(isEmit, listener, evt, callback) {
     var index = indexOf(pairs, listener, function(p) {
       return p.listener === listener;
     });
-    if (index !== -1) {
+    if (index === -1) {
       pairs.push({
         listener: listener,
         callback: callback
@@ -111,5 +106,3 @@ EventEmitter.prototype._removeEvent = function(listener, evt) {
 
   return this;
 };
-
-patched = true;
