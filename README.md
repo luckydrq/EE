@@ -6,7 +6,7 @@
 Enhance node's EventEmitter.
 
 ## Install
-`$ npm install EE`
+`$ npm install power-ee`
 
 ## Example
 You can see the [test cases](https://github.com/luckydrq/EE/blob/master/test/ee.test.js).
