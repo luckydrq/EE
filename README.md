@@ -1,4 +1,4 @@
-# EE
+# power-ee
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
@@ -9,7 +9,7 @@ Enhance node's EventEmitter.
 `$ npm install power-ee`
 
 ## Example
-You can see the [test cases](https://github.com/luckydrq/EE/blob/master/test/ee.test.js).
+You can see the [test cases](https://github.com/luckydrq/power-ee/blob/master/test/ee.test.js).
 
 ## Api
 
@@ -39,7 +39,7 @@ MIT
 
 [npm-image]: https://img.shields.io/npm/v/power-ee.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/power-ee
-[travis-image]: https://img.shields.io/travis/luckydrq/EE/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/luckydrq/EE
-[coveralls-image]: https://img.shields.io/coveralls/luckydrq/EE/master.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/luckydrq/EE?branch=master
+[travis-image]: https://img.shields.io/travis/luckydrq/power-ee/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/luckydrq/power-ee
+[coveralls-image]: https://img.shields.io/coveralls/luckydrq/power-ee/master.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/luckydrq/power-ee?branch=master
