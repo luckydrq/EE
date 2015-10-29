@@ -1,0 +1,29 @@
+{
+  "name": "EE",
+  "version": "0.1.0",
+  "keywords": [
+    "delegate",
+    "listenTo",
+    "EventEmitter"
+  ],
+  "main": "index.js",
+  "author": {
+    "name": "luckydrq",
+    "email": "drqzju@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:luckydrq/EE.git"
+  },
+  "devDependencies": {
+    "istanbul": "~0.3.20",
+    "mocha": "~2.3.2"
+  },
+  "scripts": {
+    "test": "mocha test/ee.test.js",
+    "cov": "istanbul cover _mocha test/*.js"
+  },
+  "dependencies": {
+    "array-index-of": "~0.1.0"
+  }
+}
