@@ -25,10 +25,11 @@ You can see the [test cases](https://github.com/luckydrq/EE/blob/master/test/ee.
 - callback(Function): optional. Called each time the event of the list
   emitted.
 
-* Note: The difference between #delegate and #listenTo is that the
-  source ee object will emit the same event as the target just emits. *
+** Note: The difference between #delegate and #listenTo is that the
+  source ee object will emit the same event as the target just emits. **
 
-### undelegate(target[, events])   * alias: stopListening *
+### undelegate(target[, events])
+** alias: stopListening **
 - target(EventEmitter): required
 - events(String|Array): optional. If omitted, all the events related
   will be removed.
