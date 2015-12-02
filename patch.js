@@ -5,11 +5,11 @@ var EventEmitter = require('events').EventEmitter;
 var indexOf = require('array-index-of');
 
 EventEmitter.prototype.listenTo = function(target, events, callback) {
-  this._addListener(false, target, events, callback);
+  return this._addListener(false, target, events, callback);
 };
 
 EventEmitter.prototype.delegate = function(target, events, callback) {
-  this._addListener(true, target, events, callback);
+  return this._addListener(true, target, events, callback);
 };
 
 EventEmitter.prototype.stopListening =
@@ -31,7 +31,7 @@ EventEmitter.prototype.undelegate = function(target, events) {
 
 EventEmitter.prototype._addListener = function(isEmit, target, events, callback) {
   if (!(target instanceof EventEmitter)) {
-    return;
+    return this;
   }
   target = require('./index').patch(target);
 
@@ -44,6 +44,8 @@ EventEmitter.prototype._addListener = function(isEmit, target, events, callback)
   events.forEach(function(evt) {
     target._addEvent(isEmit, this, evt, callback);
   }, this);
+
+  return this;
 };
 
 EventEmitter.prototype._addEvent = function(isEmit, listener, evt, callback) {
